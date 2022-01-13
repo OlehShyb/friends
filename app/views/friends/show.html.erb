@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+<div class="jumbotron">
+  <h1 class="display-4">Hello</h1>
+  <p class="lead">Oleh</p>
+  <hr class="my-4">
+  <p>Shebunchak</p>
+  <a class="btn-btn-primary btn-lg" href="#" role="button">More</a>
+</div>
+<%= render @friend %>
+
+<div>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: 'btn btn-secondary'%>
+  <%= link_to "Back to friends", friends_path, class: 'btn btn-dark' %>
+</div>

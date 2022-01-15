@@ -1,6 +1,15 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: %i[ show edit update destroy ]
 
+  def pbcopy(input)
+    str = input.to_s
+    IO.popen('pbcopy', 'w') { |f| f << str }
+    str
+  end
+
+  def pbpaste
+    `pbpaste`
+  end
   # GET /friends or /friends.json
   def index
     @friends = Friend.all

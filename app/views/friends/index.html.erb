@@ -1,4 +1,5 @@
-<p style="color: green"><%= notice %></p>
+
+
 <h1>All info about friends:</h1>
 <style>
   .ivoryColor{
@@ -41,6 +42,7 @@
         <td><%= link_to 'Show', friend, class: 'ivoryColor' %></td>
         <td><%= link_to 'Edit', edit_friend_path(friend), class: 'ivoryColor' %></td>
         <td><%= button_to 'Destroy', friend, method: :delete, class: 'redColor' %></td>
+        <td><%# button_to 'Copy', friend, method: pbcopy(friend.instagram), class: 'redColor' %></td>
       </tr>
     <% end %>
   </tbody>

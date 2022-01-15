@@ -1,14 +1,24 @@
-<p style="color: green"><%= notice %></p>
-<div class="jumbotron">
-  <h1 class="display-4">Hello</h1>
-  <p class="lead">Oleh</p>
-  <hr class="my-4">
-  <p>Shebunchak</p>
-  <a class="btn-btn-primary btn-lg" href="#" role="button">More</a>
-</div>
-<%= render @friend %>
 
-<div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend), class: 'btn btn-secondary'%>
-  <%= link_to "Back to friends", friends_path, class: 'btn btn-dark' %>
-</div>
+
+<main>
+  <div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">
+          <%= @friend.first_name %>
+          <%= @friend.last_name %>
+        </h1>
+        <p class="col-md-8 fs-4">
+          <%= @friend.email %> |
+          <%= @friend.phone %> |
+          <%= @friend.instagram %>
+        </p>
+        <div>
+          <%= link_to "Edit", edit_friend_path(@friend), class: 'btn btn-secondary'%>
+          <%= link_to "Back", friends_path, class: 'btn btn-dark' %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
